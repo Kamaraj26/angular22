@@ -1,13 +1,14 @@
 import { Component, inject, OnInit, signal } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { ZomotaAppState } from './store/zomota.reducer';
-import { HeaderComponent } from './components/header/header';
+import { Footer } from "./components/footer/footer";
+import { Header } from './components/header/header';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrls: ['./app.scss'],
-  imports: [HeaderComponent]
+  imports: [Header, Footer]
 })
 export class App implements OnInit {
   protected readonly title = signal('zomotaApp');
